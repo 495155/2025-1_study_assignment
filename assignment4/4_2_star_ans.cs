@@ -13,7 +13,7 @@ namespace star
             // ---------- TODO ----------
             for (int i = 0; i < size; i++)
             {
-                if (i == 0)
+                if (i == 0) //첫 줄
                 {
                     for (int j = 0; j < size; j++) { Console.Write(" "); }
                     for (int j = 0; j < size; j++)
@@ -23,7 +23,7 @@ namespace star
                     }
                     Console.WriteLine();
                 }
-                else if (i == 1 || i == size - 1)
+                else if (i == 1 || i == size - 1) //C의 위/아래 변 부분
                 {
                     Console.Write(" ");
                     for (int j = 0; j < size - 2; j++) { Console.Write("*"); }
@@ -35,14 +35,14 @@ namespace star
                     }
                     Console.WriteLine();
                 }
-                else if (i == size / 3 || i == (size / 3) * 2)
+                else if (i == size / 3 || i == (size / 3) * 2) //#의 가로줄 부분
                 {
                     Console.Write("*");
                     for (int j = 0; j < (size - 1); j++) { Console.Write(" "); }
                     for (int j = 0; j < size; j++) { Console.Write("*"); }
                     Console.WriteLine();
                 }
-                else
+                else //그 외
                 {
                     Console.Write("*");
                     for (int j = 0; j < (size - 1); j++) { Console.Write(" "); }
