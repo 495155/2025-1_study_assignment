@@ -11,17 +11,45 @@ namespace star
             int size = 2 * (radius + 1);
 
             // ---------- TODO ----------
-            for(int i = 0; i < size; i++) {
-                if (i == 0 || i == (size - 1)) {
-                    for(int j = 0; j < size; j++) {
-                        Console.Write('*');
+            for (int i = 0; i < size; i++)
+            {
+                if (i == 0)
+                {
+                    for (int j = 0; j < size; j++) { Console.Write(" "); }
+                    for (int j = 0; j < size; j++)
+                    {
+                        if (j == size / 3 || j == (size / 3) * 2) { Console.Write("*"); }
+                        else { Console.Write(" "); }
                     }
                     Console.WriteLine();
                 }
-                else {
-                    Console.Write('*');
-                    for(int j = 0; j < (size - 1); j++) {
-                        Console.Write(' ');
+                else if (i == 1 || i == size - 1)
+                {
+                    Console.Write(" ");
+                    for (int j = 0; j < size - 2; j++) { Console.Write("*"); }
+                    Console.Write(" ");
+                    for (int j = 0; j < size; j++)
+                    {
+                        if (j == size / 3 || j == (size / 3) * 2) { Console.Write("*"); }
+                        else { Console.Write(" "); }
+                    }
+                    Console.WriteLine();
+                }
+                else if (i == size / 3 || i == (size / 3) * 2)
+                {
+                    Console.Write("*");
+                    for (int j = 0; j < (size - 1); j++) { Console.Write(" "); }
+                    for (int j = 0; j < size; j++) { Console.Write("*"); }
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.Write("*");
+                    for (int j = 0; j < (size - 1); j++) { Console.Write(" "); }
+                    for (int j = 0; j < size; j++)
+                    {
+                        if (j == size / 3 || j == (size / 3) * 2) { Console.Write("*"); }
+                        else { Console.Write(" "); }
                     }
                     Console.WriteLine();
                 }
